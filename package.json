@@ -10,11 +10,11 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
+    "framer-motion": "^11.0.0",
+    "lucide-react": "^0.344.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet-async": "^2.0.4",
-    "framer-motion": "^11.0.0",
-    "lucide-react": "^0.344.0"
+    "react-helmet-async": "^2.0.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.55",
@@ -27,9 +27,15 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
+    "terser": "^5.43.1",
     "vite": "^5.1.0"
   },
-  "keywords": ["landing-page", "react", "tailwind", "nova-banca"],
+  "keywords": [
+    "landing-page",
+    "react",
+    "tailwind",
+    "nova-banca"
+  ],
   "author": "Nova Banca",
   "license": "MIT"
-} 
+}
