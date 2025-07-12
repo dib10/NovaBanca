@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Copy, MapPin, ExternalLink } from 'lucide-react'
+import logoCopa from '../assets/logo-copa.png'
 
 const CopaPopup = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -100,7 +101,7 @@ const CopaPopup = () => {
                 className="mb-6"
               >
                 <img 
-                  src="/logo-copa.png" 
+                  src={logoCopa}
                   alt="Copa do Mundo 2026" 
                   className="w-24 h-24 mx-auto object-contain"
                 />

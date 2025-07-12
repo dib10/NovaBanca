@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { MapPin, ArrowRight, ChevronDown } from 'lucide-react'
+import largoImage from '../assets/largo.jpeg'
 
 const Hero = () => {
   const handleDirections = () => {
@@ -19,7 +20,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/largo.jpeg)',
+          backgroundImage: `url(${largoImage})`,
           filter: 'brightness(0.7) contrast(1.1)'
         }}
       >

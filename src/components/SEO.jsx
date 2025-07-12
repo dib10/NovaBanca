@@ -12,7 +12,7 @@ const SEO = () => {
       <meta property="og:description" content="Mais que uma banca. O seu ponto de confiança para notícias, serviços e um bom dia." />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://novabanca.com.br" />
-      <meta property="og:image" content="/largo.jpeg" />
+      <meta property="og:image" content="/src/assets/largo.jpeg" />
       
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -26,7 +26,7 @@ const SEO = () => {
           "@type": "LocalBusiness",
           "name": "Nova Banca",
           "description": "Banca de jornal e conveniência no Belenzinho",
-          "image": "/largo.jpeg",
+          "image": "/src/assets/largo.jpeg",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Largo São José do Belém, 61",
