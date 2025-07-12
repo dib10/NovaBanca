@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #212121;
+    background-color: #EAEAEA;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-action-red text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-action-red/30;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-action-red font-bold py-3 px-6 rounded-lg border-2 border-action-red transition-all duration-300 hover:bg-action-red hover:text-white focus:outline-none focus:ring-4 focus:ring-action-red/30;
+  }
+  
+  .section-title {
+    @apply font-anton text-4xl md:text-5xl text-action-red uppercase tracking-wide text-center mb-12;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl;
+  }
+} 

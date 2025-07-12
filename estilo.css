@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css?family=Anton:400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+:root {
+  --vermelho: #D8302F;
+  --cinza-fundo: #EAEAEA;
+  --cinza-metal: #B4B4B4;
+  --texto-escuro: #333333;
+  --texto-claro: #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: var(--cinza-fundo);
+  color: var(--texto-escuro);
+}
+
+/* === SEÇÃO 1: BANNER PRINCIPAL === */
+.banner {
+  background: var(--vermelho);
+  color: var(--texto-claro);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.banner-conteudo h1 {
+  font-family: 'Anton', Arial, sans-serif;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+}
+.banner-conteudo .subtitulo {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* === SEÇÃO 2: HISTÓRIA === */
+.historia {
+  background: var(--cinza-fundo);
+  padding: 60px 20px 40px 20px;
+  text-align: center;
+}
+.historia-texto p {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  font-size: 1.2rem;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 32px 24px;
+  border: 1.5px solid #E0E0E0;
+  text-align: center;
+  font-weight: 400;
+}
+.linha-do-tempo {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 180px;
+}
+.linha-do-tempo .linha {
+  position: absolute;
+  top: 60px;
+  left: 10%;
+  right: 10%;
+  height: 4px;
+  background: var(--cinza-metal);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.marcador {
+  background: var(--texto-claro);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 24px 18px 18px 18px;
+  width: 28%;
+  min-width: 200px;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+.marcador h3 {
+  font-family: 'Anton', Arial, sans-serif;
+  color: var(--vermelho);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+}
+.marcador p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Estados animados (ativados via JS) */
+.linha-do-tempo.ativa .linha {
+  opacity: 1;
+}
+.linha-do-tempo.ativa .marcador {
+  opacity: 1;
+  transform: translateY(0);
+}
+.linha-do-tempo.ativa .marcador1 {
+  transition-delay: 0.2s;
+}
+.linha-do-tempo.ativa .marcador2 {
+  transition-delay: 0.5s;
+}
+.linha-do-tempo.ativa .marcador3 {
+  transition-delay: 0.8s;
+}
+
+/* === SEÇÃO 3: SERVIÇOS === */
+.servicos {
+  background: var(--texto-claro);
+  padding: 60px 20px;
+  text-align: center;
+}
+.servicos h2 {
+  font-family: 'Anton', Arial, sans-serif;
+  color: var(--vermelho);
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+.servicos-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+.servico {
+  background: var(--cinza-fundo);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 32px 24px 24px 24px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+}
+.servico:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+.icone {
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.servico p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* === SEÇÃO 4: VENHA NOS VISITAR === */
+.visite {
+  display: flex;
+  flex-wrap: wrap;
+  background: var(--cinza-fundo);
+  padding: 60px 0 60px 0;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
+}
+.visite-mapa {
+  flex: 1 1 350px;
+  min-width: 320px;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+.visite-info {
+  flex: 1 1 320px;
+  min-width: 280px;
+  max-width: 400px;
+  background: var(--texto-claro);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 36px 28px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.visite-info h2 {
+  font-family: 'Anton', Arial, sans-serif;
+  color: var(--vermelho);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+}
+.visite-info p {
+  font-size: 1.1rem;
+  margin: 0 0 12px 0;
+}
+
+/* === SEÇÃO 5: FOOTER === */
+.footer {
+  background: var(--texto-escuro);
+  color: var(--texto-claro);
+  text-align: center;
+  padding: 24px 10px 16px 10px;
+}
+.footer-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.footer-redes {
+  margin-top: 8px;
+}
+.footer-icone svg {
+  vertical-align: middle;
+  transition: opacity 0.2s;
+  opacity: 0.8;
+}
+.footer-icone:hover svg {
+  opacity: 1;
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 900px) {
+  .linha-do-tempo {
+    flex-direction: column;
+    align-items: center;
+    min-height: 0;
+  }
+  .linha-do-tempo .linha {
+    top: 0;
+    left: 50%;
+    right: auto;
+    width: 4px;
+    height: 80%;
+    min-height: 180px;
+  }
+  .marcador {
+    width: 90%;
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 700px) {
+  .banner-conteudo h1 {
+    font-size: 2.2rem;
+  }
+  .banner-conteudo .subtitulo {
+    font-size: 1.1rem;
+  }
+  .servicos-lista {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .servico {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .visite {
+    flex-direction: column;
+    padding: 40px 0;
+  }
+  .visite-mapa, .visite-info {
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 0 20px 0;
+    padding: 0 10px;
+  }
+}
+
+/* === POP-UP COPA DO MUNDO === */
+.popup-copa {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.popup-copa.ativo {
+  visibility: visible;
+  opacity: 1;
+}
+.popup-copa-conteudo {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px 24px 24px 24px;
+  max-width: 90vw;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  position: relative;
+}
+.popup-copa-conteudo h2 {
+  font-family: 'Anton', Arial, sans-serif;
+  color: #D8302F;
+  margin-top: 0;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+.popup-copa-conteudo p {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #333;
+  font-size: 1.1rem;
+  margin: 0;
+}
+.popup-copa-fechar {
+  position: absolute;
+  top: 10px; right: 16px;
+  font-size: 2rem;
+  color: #B4B4B4;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.popup-copa-fechar:hover {
+  color: #D8302F;
+}
+
+.btn-copa {
+  margin-top: 18px;
+  background: #D8302F;
+  color: #fff;
+  font-family: 'Anton', Arial, sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, transform 0.2s;
+  letter-spacing: 1px;
+}
+.btn-copa:hover {
+  background: #b41e1e;
+  transform: scale(1.04);
+}
+.texto-aux-copa {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #B4B4B4;
+  font-size: 0.98rem;
+  margin-top: 6px;
+}
+
+.referencia {
+  display: block;
+  color: #333333;
+  font-size: 0.98rem;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.titulo-sobre {
+  font-family: 'Anton', Arial, sans-serif;
+  color: #D8302F;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.titulo-contato {
+  font-family: 'Anton', Arial, sans-serif;
+  color: #D8302F;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.contato {
+  max-width: 900px;
+  margin: 60px auto 60px auto;
+  padding: 0 16px;
+  text-align: center;
+}
+.contato-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.contato-mapa {
+  width: 100%;
+  max-width: 380px;
+  min-width: 260px;
+  margin: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  flex: 1 1 340px;
+}
+.contato-info {
+  flex: 1 1 320px;
+  min-width: 220px;
+  max-width: 400px;
+  text-align: left;
+  margin: 0;
+  padding: 0 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contato-info p {
+  font-size: 1.1rem;
+  margin: 0 0 16px 0;
+}
+
+@media (max-width: 900px) {
+  .contato-flex {
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+  }
+  .contato-mapa, .contato-info {
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .contato-info {
+    text-align: center;
+    padding: 0;
+  }
+}
