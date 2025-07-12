@@ -11,7 +11,7 @@ import CopaPopup from './components/CopaPopup'
 function App() {
   return (
     <HelmetProvider>
-      <div className="min-h-screen bg-light-gray">
+      <div className="min-h-screen bg-light-gray overflow-x-hidden w-full">
         <SEO />
         <Hero />
         <Services />

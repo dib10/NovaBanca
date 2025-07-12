@@ -5,12 +5,20 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   
   body {
     font-family: 'Roboto', Arial, sans-serif;
     color: #212121;
     background-color: #EAEAEA;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  * {
+    box-sizing: border-box;
   }
 }
 
