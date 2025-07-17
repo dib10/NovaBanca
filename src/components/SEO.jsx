@@ -11,7 +11,7 @@ const SEO = () => {
       <meta property="og:title" content="Nova Banca: A sua conveniência diária no coração do Belenzinho" />
       <meta property="og:description" content="Mais que uma banca. O seu ponto de confiança para notícias, serviços e um bom dia." />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://novabanca.com.br" />
+      <meta property="og:url" content="https://novabanca.vercel.app/" />
       <meta property="og:image" content="/src/assets/largo.jpeg" />
       
       {/* Twitter Card */}
