@@ -4,7 +4,7 @@ const SEO = () => {
   return (
     <Helmet>
       <title>Nova Banca: A sua conveniência diária no coração do Belenzinho</title>
-      <meta name="description" content="Banca de jornal no Belenzinho. Notícias, mangás, refrigerantes e serviços. Largo São José do Belém, 61. Aberto todos os dias." />
+      <meta name="description" content="Banca de jornal no Belenzinho. Notícias, mangás, refrigerantes e serviços. Largo São José do Belém, 61. Segunda a sexta das 09h às 18h, sábado das 09h às 16h, feriados das 09h às 15h, domingo fechado." />
       <meta name="keywords" content="banca de jornal, belenzinho, são paulo, notícias, mangás, conveniência, largo são josé do belém" />
       
       {/* Open Graph */}
@@ -41,8 +41,9 @@ const SEO = () => {
             "longitude": -46.589222
           },
           "openingHours": [
-            "Mo-Sa 06:00-19:00",
-            "Su 07:00-13:00"
+            "Mo-Fr 09:00-18:00",
+            "Sa 09:00-16:00",
+            "PH 09:00-15:00"
           ],
           "telephone": "+55-11-XXXX-XXXX",
           "priceRange": "$$",

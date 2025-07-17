@@ -96,12 +96,20 @@ const Location = () => {
                   <h3 className="text-2xl font-bold text-dark-gray mb-3">Horários de Funcionamento</h3>
                   <div className="space-y-3 text-lg">
                     <div className="flex justify-between items-center">
-                      <span className="font-medium">Segunda a Sábado:</span>
-                      <span className="font-bold text-action-red">06:00 - 19:00</span>
+                      <span className="font-medium">Segunda a Sexta:</span>
+                      <span className="font-bold text-action-red">09:00 - 18:00</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="font-medium">Domingos e Feriados:</span>
-                      <span className="font-bold text-action-red">07:00 - 13:00</span>
+                      <span className="font-medium">Sábado:</span>
+                      <span className="font-bold text-action-red">09:00 - 16:00</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="font-medium">Domingo:</span>
+                      <span className="font-bold text-action-red">Fechado</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="font-medium">Feriados:</span>
+                      <span className="font-bold text-action-red">09:00 - 15:00</span>
                     </div>
                   </div>
                 </div>

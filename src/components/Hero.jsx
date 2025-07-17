@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { MapPin, ArrowRight, ChevronDown } from 'lucide-react'
 import largoImage from '../assets/largo.jpeg'
 import perfilBancaImage from '../assets/perfil-banca.png'
+import perfilBanca2Image from '../assets/banca-perfil2.jpeg'
 
 const Hero = () => {
   const handleDirections = () => {
@@ -21,7 +22,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat overflow-hidden"
         style={{
-          backgroundImage: `url(${perfilBancaImage})`,
+          backgroundImage: `url(${perfilBanca2Image})`,
           filter: 'brightness(0.7) contrast(1.1)'
         }}
       >
