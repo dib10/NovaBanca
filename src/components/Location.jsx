@@ -34,7 +34,7 @@ const Location = () => {
           >
             <div className="bg-light-gray rounded-xl overflow-hidden shadow-lg">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.1234567890123!2d-46.589222!3d-23.540857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMyJzI3LjEiUyA0NsKwMzUnMjEuMiJX!5e0!3m2!1spt-BR!2sbr!4v1234567890123"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14631.141703060797!2d-46.6048287!3d-23.5402188!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce595b1304c109%3A0xb9f506b87ea2dba7!2sNova%20Banca!5e0!3m2!1spt-BR!2sbr!4v1752860944582!5m2!1spt-BR!2sbr"
                 width="100%" 
                 height="400" 
                 style={{ border: 0 }} 
