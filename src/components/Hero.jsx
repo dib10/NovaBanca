@@ -6,7 +6,7 @@ import perfilBanca2Image from '../assets/banca-perfil2.jpeg'
 
 const Hero = () => {
   const handleDirections = () => {
-    window.open('https://maps.google.com/?q=Largo+São+José+do+Belém,+61,+São+Paulo,+SP', '_blank')
+    window.open('https://maps.app.goo.gl/635Sgj2hZrR1pN8U9', '_blank')
   }
 
   const scrollToSection = (sectionId) => {

@@ -58,7 +58,7 @@ const CopaPopup = () => {
   }
 
   const openMaps = () => {
-    window.open('https://maps.google.com/?q=Largo+São+José+do+Belém,+61,+São+Paulo,+SP', '_blank')
+    window.open('https://maps.app.goo.gl/635Sgj2hZrR1pN8U9', '_blank')
   }
 
   return (

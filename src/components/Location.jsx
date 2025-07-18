@@ -3,7 +3,7 @@ import { MapPin, Clock, Phone, ExternalLink } from 'lucide-react'
 
 const Location = () => {
   const handleDirections = () => {
-    window.open('https://maps.google.com/?q=Largo+São+José+do+Belém,+61,+São+Paulo,+SP', '_blank')
+    window.open('https://maps.app.goo.gl/635Sgj2hZrR1pN8U9', '_blank')
   }
 
   const handleCall = () => {
@@ -74,7 +74,7 @@ const Location = () => {
                 <div>
                   <h3 className="text-2xl font-bold text-dark-gray mb-3">Endereço</h3>
                   <div className="space-y-2 text-lg">
-                    <p className="font-semibold">Largo São José do Belém, 61</p>
+                    <p className="font-semibold">Largo São José do Belém, 61 - Belém, São Paulo - SP, 03057-040</p>
                     <p>Belenzinho</p>
                     <p>São Paulo - SP</p>
                     <p>CEP: 03057-040</p>

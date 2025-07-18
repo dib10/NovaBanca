@@ -29,7 +29,7 @@ const SEO = () => {
           "image": "/src/assets/largo.jpeg",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Largo São José do Belém, 61",
+            "streetAddress": "Largo São José do Belém, 61 - Belém, São Paulo - SP, 03057-040",
             "addressLocality": "São Paulo",
             "addressRegion": "SP",
             "postalCode": "03057-040",
@@ -48,7 +48,8 @@ const SEO = () => {
           "telephone": "+55-11-XXXX-XXXX",
           "priceRange": "$$",
           "currenciesAccepted": "BRL",
-          "paymentAccepted": "Cash, Credit Card"
+          "paymentAccepted": "Cash, Credit Card",
+          "hasMap": "https://maps.app.goo.gl/635Sgj2hZrR1pN8U9"
         })}
       </script>
     </Helmet>
