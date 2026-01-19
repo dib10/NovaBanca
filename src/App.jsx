@@ -2,6 +2,7 @@ import { HelmetProvider } from 'react-helmet-async'
 import Hero from './components/Hero'
 import Services from './components/Services'
 import Timeline from './components/Timeline'
+import FAQ from './components/FAQ'
 import Location from './components/Location'
 import Footer from './components/Footer'
 import SEO from './components/SEO'
@@ -16,6 +17,7 @@ function App() {
         <Hero />
         <Services />
         <Timeline />
+        <FAQ />
         <Location />
         <Footer />
         <ScrollToTop />
