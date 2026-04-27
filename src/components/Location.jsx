@@ -5,7 +5,6 @@ import {
   PHONE_DISPLAY_BR,
   WHATSAPP_HREF,
 } from '../data/copa2026'
-import CopaProductStrip from './CopaProductStrip'
 
 const Location = () => {
   const handleDirections = () => {
@@ -31,9 +30,6 @@ const Location = () => {
           className="text-center mb-16"
         >
           <h2 className="section-title">Endereço e Horários</h2>
-          <div className="mt-8 text-gray-700 flex justify-center">
-            <CopaProductStrip variant="compact" />
-          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">

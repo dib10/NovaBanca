@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { MapPin, ArrowRight, ChevronDown } from 'lucide-react'
 import perfilBanca2Image from '../assets/banca-perfil2.jpeg'
-import CopaProductStrip from './CopaProductStrip'
 
 const Hero = () => {
   const handleDirections = () => {
@@ -82,25 +81,6 @@ const Hero = () => {
             className="text-white border-2 border-white px-6 py-3 rounded-lg hover:bg-white hover:text-dark-gray transition-all duration-300"
           >
             Nossos Serviços
-          </button>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.75 }}
-          className="mt-12 md:mt-14 text-white"
-        >
-          <p className="text-sm uppercase tracking-widest text-gray-300 mb-4">
-            Copa do Mundo 2026 na banca
-          </p>
-          <CopaProductStrip variant="hero" className="text-white" />
-          <button
-            type="button"
-            onClick={() => scrollToSection('produtos-copa')}
-            className="mt-8 inline-block text-sm font-bold text-white border-b-2 border-white/50 hover:border-white transition-colors"
-          >
-            Ver produtos e preços
           </button>
         </motion.div>
       </div>

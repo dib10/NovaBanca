@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import CopaProductStrip from './CopaProductStrip'
 
 const timelineData = [
   {
@@ -41,9 +40,6 @@ const Timeline = () => {
             Como um importante centro comercial e ponto de referência do bairro, temos orgulho de fazer 
             parte desta história, ao lado da Paróquia São José de Belém e de tantos outros comércios e serviços.
           </p>
-          <div className="mt-10 text-gray-700 flex justify-center">
-            <CopaProductStrip variant="compact" />
-          </div>
         </motion.div>
 
         <div ref={ref} className="relative">
