@@ -11,6 +11,7 @@ import {
   PHONE_DISPLAY_BR,
   KIT_PROMO_LONG,
 } from '../data/copa2026'
+import CopaProductStrip from './CopaProductStrip'
 
 const faqData = [
   {
@@ -98,6 +99,9 @@ const FAQ = () => {
             Preços, lançamento em {LAUNCH_DATE_BR}, kit promocional e como nos
             encontrar no Belenzinho.
           </p>
+          <div className="mt-8 text-gray-700 flex justify-center">
+            <CopaProductStrip variant="compact" />
+          </div>
         </motion.div>
 
         <div className="space-y-4">

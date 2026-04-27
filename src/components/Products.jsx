@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { MessageCircle } from 'lucide-react'
 import { COPA_PRODUCTS, WHATSAPP_HREF, LAUNCH_DATE_BR } from '../data/copa2026'
+import { PRODUCT_IMAGES_BY_ID } from '../data/copaProductImages'
 
 const Products = () => {
   return (
@@ -47,6 +48,17 @@ const Products = () => {
                 <p className="text-xs font-bold uppercase tracking-wide text-action-red mb-2">
                   Oferta especial
                 </p>
+              )}
+              {PRODUCT_IMAGES_BY_ID[product.id] && (
+                <img
+                  src={PRODUCT_IMAGES_BY_ID[product.id]}
+                  alt={product.name}
+                  width={280}
+                  height={200}
+                  className="max-h-48 w-full object-contain mx-auto rounded-lg mb-4 bg-gray-50"
+                  decoding="async"
+                  loading="lazy"
+                />
               )}
               <h3 className="text-xl font-bold text-dark-gray mb-1">
                 {product.name}

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Newspaper, BookOpen, Coffee } from 'lucide-react'
+import CopaProductStrip from './CopaProductStrip'
 
 const services = [
   {
@@ -33,6 +34,19 @@ const Services = () => {
           <h2 className="section-title">
             Tudo o que você precisa, em um só lugar
           </h2>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto mb-14 rounded-2xl bg-light-gray border border-gray-200 px-6 py-8 md:px-10 text-dark-gray"
+        >
+          <p className="text-center font-semibold text-dark-gray mb-6">
+            Copa 2026 Panini — pacotinho, álbum e kit no Belenzinho
+          </p>
+          <CopaProductStrip variant="inline" />
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

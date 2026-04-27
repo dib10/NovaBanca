@@ -4,6 +4,18 @@ export const SITE_URL = 'https://novabanca.vercel.app'
 
 export const OG_IMAGE_PATH = '/largo.jpeg'
 
+/** Servidas em `public/` — URLs estáveis para Product.image no JSON-LD. */
+export const SCHEMA_PRODUCT_IMAGE_CROMOS = '/schema-product-cromos.png'
+export const SCHEMA_PRODUCT_IMAGE_ALBUM = '/schema-product-album.png'
+/** Kit promocional (imagem própria do combo). */
+export const SCHEMA_PRODUCT_IMAGE_KIT_BROCHURA = '/schema-product-kit-brochura.png'
+
+export function absoluteSiteUrl(path) {
+  const origin = SITE_URL.replace(/\/$/, '')
+  const normalized = path.startsWith('/') ? path : `/${path}`
+  return `${origin}${normalized}`
+}
+
 /** Mesmo número para WhatsApp e ligação (E.164 sem espaços). */
 export const TELEPHONE_E164 = '+5511990152399'
 
@@ -62,6 +74,7 @@ export const COPA_PRODUCTS = [
     description:
       'Pacotinho avulso com 7 cromos da coleção oficial da Copa do Mundo 2026.',
     featured: false,
+    schemaImagePath: SCHEMA_PRODUCT_IMAGE_CROMOS,
   },
   {
     id: 'album-brochura',
@@ -72,6 +85,7 @@ export const COPA_PRODUCTS = [
     description:
       'Álbum brochura oficial Panini para você colar as figurinhas da Copa 2026.',
     featured: false,
+    schemaImagePath: SCHEMA_PRODUCT_IMAGE_ALBUM,
   },
   {
     id: 'combo-kit',
@@ -81,6 +95,7 @@ export const COPA_PRODUCTS = [
     priceDisplay: PRICE_KIT_DISPLAY,
     description: KIT_PRODUCT_CARD_DESCRIPTION,
     featured: true,
+    schemaImagePath: SCHEMA_PRODUCT_IMAGE_KIT_BROCHURA,
   },
 ]
 

@@ -9,6 +9,7 @@ import {
   LAUNCH_DATE_BR,
   PRICE_PACOTINHO_DISPLAY,
   PRICE_KIT_DISPLAY,
+  absoluteSiteUrl,
 } from '../data/copa2026'
 
 const SITE_ORIGIN = SITE_URL.replace(/\/$/, '')
@@ -51,6 +52,7 @@ const jsonLdGraph = {
       '@id': `${SITE_ORIGIN}/#product-${p.id}`,
       name: p.name + (p.id === 'pacotinho' ? ' (7 cromos)' : ''),
       description: p.description,
+      image: absoluteSiteUrl(p.schemaImagePath),
       offers: {
         '@type': 'Offer',
         priceCurrency: 'BRL',
