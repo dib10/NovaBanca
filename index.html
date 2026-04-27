@@ -2,48 +2,11 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="src/assets/jornal.png" />
+    <link rel="icon" type="image/png" href="/src/assets/jornal.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    
-    <!-- SEO Local -->
-    <title>Nova Banca: A sua conveniência diária no coração do Belenzinho</title>
-    <meta name="description" content="Banca de jornal no Belenzinho. Notícias, mangás, refrigerantes e serviços. Largo São José do Belém, 61. Aberto todos os dias." />
-    <meta name="keywords" content="banca de jornal, belenzinho, são paulo, notícias, mangás, conveniência, largo são josé do belém" />
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Nova Banca: A sua conveniência diária no coração do Belenzinho" />
-    <meta property="og:description" content="Mais que uma banca. O seu ponto de confiança para notícias, serviços e um bom dia." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://novabanca.vercel.app/" />
-    
-    <!-- Local Business Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Nova Banca",
-      "description": "Banca de jornal e conveniência no Belenzinho",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Largo São José do Belém, 61",
-        "addressLocality": "São Paulo",
-        "addressRegion": "SP",
-        "postalCode": "03057-040",
-        "addressCountry": "BR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -23.540857,
-        "longitude": -46.589222
-      },
-      "openingHours": [
-        "Mo-Fr 09:00-18:00",
-        "Sa 09:00-16:00"
-      ],
-      "telephone": "+55-11-XXXX-XXXX"
-    }
-    </script>
-    
+
+    <!-- Título/meta/schema dinâmicos vêm do react-helmet-async + pré-renderização no build -->
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,6 +22,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.jsx" prerender></script>
   </body>
 </html>

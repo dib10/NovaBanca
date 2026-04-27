@@ -1,5 +1,10 @@
 import { motion } from 'framer-motion'
-import { MapPin, Clock, Phone, ExternalLink } from 'lucide-react'
+import { MapPin, Clock, Phone, ExternalLink, MessageCircle } from 'lucide-react'
+import {
+  TELEPHONE_E164,
+  PHONE_DISPLAY_BR,
+  WHATSAPP_HREF,
+} from '../data/copa2026'
 
 const Location = () => {
   const handleDirections = () => {
@@ -7,7 +12,11 @@ const Location = () => {
   }
 
   const handleCall = () => {
-    window.open('tel:+5511XXXX-XXXX', '_self')
+    window.location.href = `tel:${TELEPHONE_E164}`
+  }
+
+  const handleWhatsApp = () => {
+    window.open(WHATSAPP_HREF, '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -124,16 +133,30 @@ const Location = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-dark-gray mb-3">Dúvidas?</h3>
-                  <p className="text-lg mb-4">Entre em contato conosco</p>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={handleCall}
-                    className="btn-secondary inline-flex items-center gap-2"
-                  >
-                    <Phone size={20} />
-                    Ligar para Dúvidas
-                  </motion.button>
+                  <p className="text-lg mb-2">Entre em contato conosco</p>
+                  <p className="text-action-red font-semibold mb-4">{PHONE_DISPLAY_BR}</p>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      type="button"
+                      onClick={handleCall}
+                      className="btn-secondary inline-flex items-center justify-center gap-2"
+                    >
+                      <Phone size={20} />
+                      Ligar
+                    </motion.button>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      type="button"
+                      onClick={handleWhatsApp}
+                      className="inline-flex items-center justify-center gap-2 bg-green-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
+                    >
+                      <MessageCircle size={20} />
+                      WhatsApp
+                    </motion.button>
+                  </div>
                 </div>
               </div>
             </div>

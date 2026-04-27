@@ -1,14 +1,20 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, Copy, MapPin, ExternalLink } from 'lucide-react'
+import { X, Copy, MapPin, ExternalLink, MessageCircle } from 'lucide-react'
 import logoCopa from '../assets/logo-copa.png'
+import {
+  ADDRESS_FULL,
+  MAPS_URL,
+  WHATSAPP_HREF,
+  LAUNCH_DATE_BR,
+  getLaunchUrgencyLine,
+} from '../data/copa2026'
 
 const CopaPopup = () => {
   const [isVisible, setIsVisible] = useState(false)
   const [copied, setCopied] = useState(false)
 
   useEffect(() => {
-    // Mostra o popup após 2 segundos
     const timer = setTimeout(() => {
       setIsVisible(true)
     }, 2000)
@@ -16,17 +22,15 @@ const CopaPopup = () => {
     return () => clearTimeout(timer)
   }, [])
 
-  // Adiciona listener para tecla ESC
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === 'Escape' && isVisible) {
-        handleClose()
+        setIsVisible(false)
       }
     }
 
     if (isVisible) {
       document.addEventListener('keydown', handleKeyDown)
-      // Previne scroll do body quando popup está aberto
       document.body.style.overflow = 'hidden'
     }
 
@@ -37,29 +41,24 @@ const CopaPopup = () => {
   }, [isVisible])
 
   const handleClose = () => {
-    console.log('Fechando popup...') // Debug
     setIsVisible(false)
   }
 
   const copyAddress = async () => {
-    const address = "Largo São José do Belém, 61 - Belenzinho, São Paulo - SP"
-    
     try {
-      await navigator.clipboard.writeText(address)
+      await navigator.clipboard.writeText(ADDRESS_FULL)
       setCopied(true)
-      
-      // Reset do estado após 2 segundos
-      setTimeout(() => {
-        setCopied(false)
-      }, 2000)
+      setTimeout(() => setCopied(false), 2000)
     } catch (err) {
       console.error('Erro ao copiar endereço:', err)
     }
   }
 
   const openMaps = () => {
-    window.open('https://maps.app.goo.gl/635Sgj2hZrR1pN8U9', '_blank')
+    window.open(MAPS_URL, '_blank')
   }
+
+  const urgencyLine = getLaunchUrgencyLine()
 
   return (
     <AnimatePresence>
@@ -75,15 +74,14 @@ const CopaPopup = () => {
             initial={{ scale: 0.8, opacity: 0, y: 50 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.8, opacity: 0, y: 50 }}
-            transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="bg-white rounded-2xl shadow-2xl max-w-md w-full relative overflow-hidden"
+            transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+            className="bg-white rounded-2xl shadow-2xl max-w-md w-full relative overflow-hidden max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Background com gradiente da Copa */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-green-500 to-yellow-400 opacity-10"></div>
-            
-            {/* Botão fechar - Corrigido com z-index maior */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-green-500 to-yellow-400 opacity-10" />
+
             <button
+              type="button"
               onClick={handleClose}
               className="absolute top-4 right-4 z-50 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white hover:scale-110 transition-all duration-200 shadow-lg"
               style={{ zIndex: 9999 }}
@@ -93,77 +91,112 @@ const CopaPopup = () => {
             </button>
 
             <div className="relative z-10 p-8 text-center">
-              {/* Logo da Copa */}
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
-                transition={{ delay: 0.2, type: "spring", damping: 15 }}
-                className="mb-6"
+                transition={{ delay: 0.2, type: 'spring', damping: 15 }}
+                className="mb-4"
               >
-                <img 
+                <img
                   src={logoCopa}
-                  alt="Copa do Mundo 2026" 
+                  alt="Copa do Mundo 2026"
                   className="w-24 h-24 mx-auto object-contain"
                 />
               </motion.div>
 
-              {/* Título */}
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-3xl font-anton text-action-red mb-4"
+                className="text-2xl sm:text-3xl font-anton text-action-red mb-2"
               >
-                COPA 2026 FIFA
+                Lançamento Copa 2026
               </motion.h2>
 
-              {/* Texto */}
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="text-lg text-gray-700 mb-6 leading-relaxed"
+                transition={{ delay: 0.35 }}
+                className="text-lg font-semibold text-gray-800 mb-1"
               >
-                Estaremos com álbum e figurinhas da Copa do Mundo 2026! 
-                <br />
-                <span className="font-semibold text-action-red">
-                  Fique de olho!
-                </span>
+                Data oficial: {LAUNCH_DATE_BR}
               </motion.p>
 
-              {/* Botões */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.38 }}
+                className="text-base text-action-red font-semibold mb-4"
+              >
+                {urgencyLine}
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="rounded-xl border-2 border-action-red/40 bg-gradient-to-br from-red-50 to-amber-50 p-4 mb-6 text-left"
+              >
+                <p className="text-gray-800 font-semibold leading-snug">
+                  {
+                    '🔥 Super Kit Copa: Álbum Brochura + 12 Envelopes por apenas R$ 77,00! (Nessa promo, o álbum sai DE GRAÇA e você ainda ganha 1 pacotinho de brinde!)'
+                  }
+                </p>
+              </motion.div>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.42 }}
+                className="text-sm text-gray-600 mb-6 leading-relaxed"
+              >
+                Venda somente no balcão — sem entregas no momento. Venha ao
+                Belenzinho!
+              </motion.p>
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
                 className="space-y-3"
               >
+                <a
+                  href={WHATSAPP_HREF}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-green-600 text-white font-bold py-4 px-6 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
+                >
+                  <MessageCircle size={22} />
+                  Reservar pelo WhatsApp
+                </a>
+
                 <button
+                  type="button"
                   onClick={copyAddress}
                   className="w-full bg-action-red text-white font-bold py-4 px-6 rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center gap-2"
                 >
                   <Copy size={20} />
-                  {copied ? 'Endereço Copiado!' : 'Copiar Endereço'}
+                  {copied ? 'Endereço copiado!' : 'Copiar endereço'}
                 </button>
 
                 <button
+                  type="button"
                   onClick={openMaps}
                   className="w-full bg-white text-action-red font-bold py-3 px-6 rounded-lg border-2 border-action-red hover:bg-action-red hover:text-white transition-colors flex items-center justify-center gap-2"
                 >
                   <MapPin size={18} />
-                  Como Chegar
+                  Como chegar
                   <ExternalLink size={16} />
                 </button>
               </motion.div>
 
-              {/* Texto auxiliar */}
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
                 className="text-sm text-gray-500 mt-4"
               >
-                (clique para copiar o endereço) • Pressione ESC para fechar
+                Clique para copiar o endereço • ESC para fechar
               </motion.p>
             </div>
           </motion.div>
@@ -173,4 +206,4 @@ const CopaPopup = () => {
   )
 }
 
-export default CopaPopup 
+export default CopaPopup

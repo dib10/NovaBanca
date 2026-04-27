@@ -1,6 +1,6 @@
-import { HelmetProvider } from 'react-helmet-async'
 import Hero from './components/Hero'
 import Services from './components/Services'
+import Products from './components/Products'
 import Timeline from './components/Timeline'
 import FAQ from './components/FAQ'
 import Location from './components/Location'
@@ -11,19 +11,18 @@ import CopaPopup from './components/CopaPopup'
 
 function App() {
   return (
-    <HelmetProvider>
-      <div className="min-h-screen bg-light-gray overflow-x-hidden w-full">
-        <SEO />
-        <Hero />
-        <Services />
-        <Timeline />
-        <FAQ />
-        <Location />
-        <Footer />
-        <ScrollToTop />
-        <CopaPopup />
-      </div>
-    </HelmetProvider>
+    <div className="min-h-screen bg-light-gray overflow-x-hidden w-full">
+      <SEO />
+      <Hero />
+      <Services />
+      <Products />
+      <Timeline />
+      <FAQ />
+      <Location />
+      <Footer />
+      <ScrollToTop />
+      <CopaPopup />
+    </div>
   )
 }
 
