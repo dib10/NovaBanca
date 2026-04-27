@@ -17,12 +17,12 @@ export function absoluteSiteUrl(path) {
 }
 
 /** Mesmo número para WhatsApp e ligação (E.164 sem espaços). */
-export const TELEPHONE_E164 = '+5511990152399'
+export const TELEPHONE_E164 = '+5511972240084'
 
-export const WHATSAPP_HREF = 'https://wa.me/5511990152399'
+export const WHATSAPP_HREF = 'https://wa.me/5511972240084'
 
 /** Formato BR para texto na interface. */
-export const PHONE_DISPLAY_BR = '(11) 99015-2399'
+export const PHONE_DISPLAY_BR = '(11) 97224-0084'
 
 export const ADDRESS_FULL =
   'Largo São José do Belém, 61 - Belenzinho, São Paulo - SP'
