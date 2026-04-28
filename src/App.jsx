@@ -6,8 +6,8 @@ import FAQ from './components/FAQ'
 import Location from './components/Location'
 import Footer from './components/Footer'
 import SEO from './components/SEO'
-import ScrollToTop from './components/ScrollToTop'
 import CopaPopup from './components/CopaPopup'
+import FloatingWhatsApp from './components/FloatingWhatsApp'
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
       <FAQ />
       <Location />
       <Footer />
-      <ScrollToTop />
+      <FloatingWhatsApp />
       <CopaPopup />
     </div>
   )

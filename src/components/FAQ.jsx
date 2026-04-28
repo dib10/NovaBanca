@@ -36,9 +36,14 @@ const faqData = [
       'Os encontros de troca de figurinhas ocorrem aos finais de semana na pracinha em frente à banca. Leve suas repetidas e sua lista de faltantes!',
   },
   {
-    question: 'Os produtos são originais?',
+    question: 'Onde achar figurinhas originais da Copa 2026 no Belenzinho?',
     answer:
-      'Sim. Trabalhamos com material Panini original e lacrado. Desconfite de ofertas suspeitas e prefira pontos de venda confiáveis como a nossa banca.',
+      'Na Nova Banca, localizada no Largo São José do Belém, 61. Nós somos revendedores oficiais e trabalhamos apenas com pacotinhos e álbuns 100% originais e lacrados da Panini. Fuja de falsificações na internet e garanta seu material oficial direto no nosso balcão.',
+  },
+  {
+    question: 'Quantas figurinhas vêm em cada pacotinho da Copa do Mundo 2026?',
+    answer:
+      'Para o álbum oficial da Copa do Mundo FIFA 2026 da Panini, cada envelope contém exatamente 7 cromos (figurinhas). Na Nova Banca, você encontra os pacotes originais avulsos por R$ 7,00 cada, prontos para você abrir e completar sua coleção!',
   },
   {
     question: 'Posso reservar pelo WhatsApp?',

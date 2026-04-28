@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
-import { MapPin, Clock, Phone, ExternalLink, MessageCircle } from 'lucide-react'
+import { MapPin, Clock, Phone, ExternalLink } from 'lucide-react'
 import {
   TELEPHONE_E164,
   PHONE_DISPLAY_BR,
-  WHATSAPP_HREF,
 } from '../data/copa2026'
+import { openWhatsAppSmart } from '../utils/openWhatsAppSmart'
 
 const Location = () => {
   const handleDirections = () => {
@@ -16,7 +16,7 @@ const Location = () => {
   }
 
   const handleWhatsApp = () => {
-    window.open(WHATSAPP_HREF, '_blank', 'noopener,noreferrer')
+    openWhatsAppSmart()
   }
 
   return (
@@ -153,7 +153,12 @@ const Location = () => {
                       onClick={handleWhatsApp}
                       className="inline-flex items-center justify-center gap-2 bg-green-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
                     >
-                      <MessageCircle size={20} />
+                      <img
+                        src="/whatsapp.png"
+                        alt=""
+                        aria-hidden="true"
+                        className="w-5 h-5 object-contain"
+                      />
                       WhatsApp
                     </motion.button>
                   </div>

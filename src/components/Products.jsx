@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
-import { MessageCircle } from 'lucide-react'
 import { COPA_PRODUCTS, WHATSAPP_HREF, LAUNCH_DATE_BR } from '../data/copa2026'
 import { PRODUCT_IMAGES_BY_ID } from '../data/copaProductImages'
+import { openWhatsAppSmart } from '../utils/openWhatsAppSmart'
 
 const Products = () => {
   return (
@@ -76,9 +76,18 @@ const Products = () => {
                 href={WHATSAPP_HREF}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(event) => {
+                  event.preventDefault()
+                  openWhatsAppSmart()
+                }}
                 className="inline-flex items-center justify-center gap-2 w-full bg-green-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-green-700 transition-colors mt-auto"
               >
-                <MessageCircle size={20} aria-hidden />
+                <img
+                  src="/whatsapp.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="w-5 h-5 object-contain"
+                />
                 Falar no WhatsApp
               </a>
             </motion.article>

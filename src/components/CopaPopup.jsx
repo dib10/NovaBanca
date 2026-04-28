@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, Copy, MapPin, ExternalLink, MessageCircle } from 'lucide-react'
+import { X, Copy, MapPin, ExternalLink } from 'lucide-react'
 import logoCopa from '../assets/logo-copa.png'
 import {
   ADDRESS_FULL,
@@ -9,6 +9,7 @@ import {
   LAUNCH_DATE_BR,
   getLaunchUrgencyLine,
 } from '../data/copa2026'
+import { openWhatsAppSmart } from '../utils/openWhatsAppSmart'
 
 const CopaPopup = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -164,9 +165,18 @@ const CopaPopup = () => {
                   href={WHATSAPP_HREF}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(event) => {
+                    event.preventDefault()
+                    openWhatsAppSmart()
+                  }}
                   className="w-full bg-green-600 text-white font-bold py-4 px-6 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
                 >
-                  <MessageCircle size={22} />
+                  <img
+                    src="/whatsapp.png"
+                    alt=""
+                    aria-hidden="true"
+                    className="w-[22px] h-[22px] object-contain"
+                  />
                   Reservar pelo WhatsApp
                 </a>
 
