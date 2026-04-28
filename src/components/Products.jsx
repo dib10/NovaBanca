@@ -4,6 +4,8 @@ import { PRODUCT_IMAGES_BY_ID } from '../data/copaProductImages'
 import { openWhatsAppSmart } from '../utils/openWhatsAppSmart'
 
 const Products = () => {
+  const whatsappIconSrc = `${import.meta.env.BASE_URL}whatsapp.png`
+
   return (
     <section
       id="produtos-copa"
@@ -83,7 +85,7 @@ const Products = () => {
                 className="inline-flex items-center justify-center gap-2 w-full bg-green-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-green-700 transition-colors mt-auto"
               >
                 <img
-                  src="/whatsapp.png"
+                  src={whatsappIconSrc}
                   alt=""
                   aria-hidden="true"
                   className="w-5 h-5 object-contain"

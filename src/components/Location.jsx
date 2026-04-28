@@ -7,6 +7,8 @@ import {
 import { openWhatsAppSmart } from '../utils/openWhatsAppSmart'
 
 const Location = () => {
+  const whatsappIconSrc = `${import.meta.env.BASE_URL}whatsapp.png`
+
   const handleDirections = () => {
     window.open('https://maps.app.goo.gl/635Sgj2hZrR1pN8U9', '_blank')
   }
@@ -154,7 +156,7 @@ const Location = () => {
                       className="inline-flex items-center justify-center gap-2 bg-green-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
                     >
                       <img
-                        src="/whatsapp.png"
+                        src={whatsappIconSrc}
                         alt=""
                         aria-hidden="true"
                         className="w-5 h-5 object-contain"

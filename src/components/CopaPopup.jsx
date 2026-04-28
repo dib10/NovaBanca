@@ -14,6 +14,7 @@ import { openWhatsAppSmart } from '../utils/openWhatsAppSmart'
 const CopaPopup = () => {
   const [isVisible, setIsVisible] = useState(false)
   const [copied, setCopied] = useState(false)
+  const whatsappIconSrc = `${import.meta.env.BASE_URL}whatsapp.png`
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -172,7 +173,7 @@ const CopaPopup = () => {
                   className="w-full bg-green-600 text-white font-bold py-4 px-6 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
                 >
                   <img
-                    src="/whatsapp.png"
+                    src={whatsappIconSrc}
                     alt=""
                     aria-hidden="true"
                     className="w-[22px] h-[22px] object-contain"
