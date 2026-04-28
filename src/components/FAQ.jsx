@@ -46,6 +46,16 @@ const faqData = [
       'Para o álbum oficial da Copa do Mundo FIFA 2026 da Panini, cada envelope contém exatamente 7 cromos (figurinhas). Na Nova Banca, você encontra os pacotes originais avulsos por R$ 7,00 cada, prontos para você abrir e completar sua coleção!',
   },
   {
+    question: 'Qual banca vai vender figurinhas e o álbum da Copa 2026 no Belenzinho?',
+    answer:
+      'A Nova Banca é o seu ponto de venda oficial no Belenzinho! Nós teremos estoque completo do álbum oficial Panini e dos pacotinhos de figurinhas a partir do lançamento em 01/05. Estamos localizados bem no coração do bairro, no Largo São José do Belém, 61. Passe aqui ou garanta o seu kit reservando pelo WhatsApp!',
+  },
+  {
+    question: 'Quantas figurinhas tem o álbum da Copa do Mundo 2026?',
+    answer:
+      'Esta edição será a maior de todos os tempos! O álbum completo da Copa de 2026 exige 980 figurinhas para ser preenchido. Ao longo de suas 112 páginas, você vai colar cromos das 48 seleções participantes, além de brilhantes, escudos e mascotes especiais. É um desafio e tanto, e a Nova Banca está aqui para te ajudar nessa jornada!',
+  },
+  {
     question: 'Posso reservar pelo WhatsApp?',
     answer: `Sim. WhatsApp ${PHONE_DISPLAY_BR}: ${WHATSAPP_HREF}. Use para combinar reserva ou tirar dúvidas antes de vir ao balcão.`,
   },
