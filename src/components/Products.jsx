@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion'
+import whatsappIcon from '../assets/whatsapp.png'
 import { COPA_PRODUCTS, WHATSAPP_HREF, LAUNCH_DATE_BR } from '../data/copa2026'
 import { PRODUCT_IMAGES_BY_ID } from '../data/copaProductImages'
 import { openWhatsAppSmart } from '../utils/openWhatsAppSmart'
 
 const Products = () => {
-  const whatsappIconSrc = `${import.meta.env.BASE_URL}whatsapp.png`
-
   return (
     <section
       id="produtos-copa"
@@ -85,7 +84,7 @@ const Products = () => {
                 className="inline-flex items-center justify-center gap-2 w-full bg-green-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-green-700 transition-colors mt-auto"
               >
                 <img
-                  src={whatsappIconSrc}
+                  src={whatsappIcon}
                   alt=""
                   aria-hidden="true"
                   className="w-5 h-5 object-contain"

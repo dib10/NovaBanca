@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Copy, MapPin, ExternalLink } from 'lucide-react'
 import logoCopa from '../assets/logo-copa.png'
+import whatsappIcon from '../assets/whatsapp.png'
 import {
   ADDRESS_FULL,
   MAPS_URL,
@@ -14,7 +15,6 @@ import { openWhatsAppSmart } from '../utils/openWhatsAppSmart'
 const CopaPopup = () => {
   const [isVisible, setIsVisible] = useState(false)
   const [copied, setCopied] = useState(false)
-  const whatsappIconSrc = `${import.meta.env.BASE_URL}whatsapp.png`
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -173,7 +173,7 @@ const CopaPopup = () => {
                   className="w-full bg-green-600 text-white font-bold py-4 px-6 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
                 >
                   <img
-                    src={whatsappIconSrc}
+                    src={whatsappIcon}
                     alt=""
                     aria-hidden="true"
                     className="w-[22px] h-[22px] object-contain"
