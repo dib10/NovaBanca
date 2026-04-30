@@ -72,7 +72,7 @@ export const COPA_PRODUCTS = [
     priceSchema: PRICE_PACOTINHO_SCHEMA,
     priceDisplay: PRICE_PACOTINHO_DISPLAY,
     description:
-      'Pacotinho avulso com 7 cromos da coleção oficial da Copa do Mundo 2026.',
+      'Pacotinho avulso com 7 cromos da coleção oficial da Copa do Mundo 2026. O único pacote com chances reais de tirar as cobiçadas Legends, Douradas, Escudos e Brilhantes!',
     featured: false,
     schemaImagePath: SCHEMA_PRODUCT_IMAGE_CROMOS,
   },
