@@ -46,6 +46,12 @@ const faqData = [
       'Para o álbum oficial da Copa do Mundo FIFA 2026 da Panini, cada envelope contém exatamente 7 cromos (figurinhas). Na Nova Banca, você encontra os pacotes originais avulsos por R$ 7,00 cada, prontos para você abrir e completar sua coleção!',
   },
   {
+    question:
+      'Existe diferença entre o pacotinho de R$ 7,00 e os pacotes mais baratos de R$ 5,00?',
+    answer:
+      'Sim, muita diferença! Existem edições promocionais e de fast-food rodando o mercado que custam menos, mas vêm com apenas 5 figurinhas comuns e não incluem as cobiçadas figurinhas raras (como as famosas Legends e Douradas). Na Nova Banca, nós trabalhamos exclusivamente com o pacotinho oficial padrão da Panini (R$ 7,00 com 7 cromos). Somente nestes pacotes oficiais você tem a chance real de tirar os cromos especiais, escudos e brilhantes para completar e valorizar a sua coleção de verdade!',
+  },
+  {
     question: 'Qual banca vai vender figurinhas e o álbum da Copa 2026 no Belenzinho?',
     answer:
       'A Nova Banca é o seu ponto de venda oficial no Belenzinho! Nós teremos estoque completo do álbum oficial Panini e dos pacotinhos de figurinhas a partir do lançamento em 01/05. Estamos localizados bem no coração do bairro, no Largo São José do Belém, 61. Passe aqui ou garanta o seu kit reservando pelo WhatsApp!',
